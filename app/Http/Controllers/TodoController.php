@@ -9,7 +9,7 @@ class TodoController extends Controller
 {
     public function index()
     {
-        return "テスト";
+        return view('index');
     }
 
     public function add()
