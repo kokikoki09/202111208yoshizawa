@@ -9,27 +9,14 @@ class TodoController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $items = DB::table('todos')->get();
+        return view('index', ['item' => $items]);
     }
 
-    public function add()
+    public function create(Request $request)
     {
-        return view('add');
-    }
-
-    public function create()
-    {
-
-    }
-
-    public function edit()
-    {
-
-    }
-
-    public function update()
-
-    {
-
+        $param = [];
+        DB::table('todos')->insert($param);
+        return redirect('/');
     }
 }
