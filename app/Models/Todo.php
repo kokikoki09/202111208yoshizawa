@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Todo extends Model
 {
     use HasFactory;
-    protected $guarded = array('id');
+    protected $fillable = ['content'];
+
+    public static $rules = array(
+        'content' => 'string|min:0|max:191',
+    );
 }
