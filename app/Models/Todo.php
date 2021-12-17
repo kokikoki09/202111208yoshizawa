@@ -11,6 +11,7 @@ class Todo extends Model
     protected $fillable = ['content'];
 
     public static $rules = array(
-        'content' => 'string|min:0|max:191',
+        'content' => 'string
+        |min:0|max:191',
     );
 }

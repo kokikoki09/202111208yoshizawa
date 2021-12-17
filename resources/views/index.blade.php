@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="resources\css\index.blade.css">
-  <link rel="stylesheet" href="resources\css\reset.css">
+  <link rel="stylesheet" href="{{ asset('resources\css\index.blade.css') }}">
+  <link rel="stylesheet" href="{{ asset('resources\css\reset.css') }}">
   <title>COACHTECH</title>
 </head>
 
@@ -34,63 +34,6 @@
               <input type="hidden" name="_token" value="">
               <td>
                 <input type="text" class="input-update" value="mama" name="content" />
-              </td>
-              <td>
-                <button class="button-update">更新</button>
-              </td>
-            </form>
-            <td>
-              <form action="" method="post">
-                <input type="hidden" name="_token" value=""> <button class="button-delete">削除</button>
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              2021-12-08 13:20:22
-            </td>
-            <form action="" method="post">
-              <input type="hidden" name="_token" value="">
-              <td>
-                <input type="text" class="input-update" value="vv" name="content" />
-              </td>
-              <td>
-                <button class="button-update">更新</button>
-              </td>
-            </form>
-            <td>
-              <form action="" method="post">
-                <input type="hidden" name="_token" value=""> <button class="button-delete">削除</button>
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              2021-12-08 14:11:22
-            </td>
-            <form action="" method="post">
-              <input type="hidden" name="_token" value="">
-              <td>
-                <input type="text" class="input-update" value="愛" name="content" />
-              </td>
-              <td>
-                <button class="button-update">更新</button>
-              </td>
-            </form>
-            <td>
-              <form action="" method="post">
-                <input type="hidden" name="_token" value=""> <button class="button-delete">削除</button>
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              2021-12-08 14:11:26
-            </td>
-            <form action="" method="post">
-              <input type="hidden" name="_token" value="">
-              <td>
-                <input type="text" class="input-update" value="" name="content" />
               </td>
               <td>
                 <button class="button-update">更新</button>
