@@ -14,11 +14,6 @@ class TodoController extends Controller
         return view('index', ['items' => $items]);
     }
 
-    public function add()
-    {
-        return view('add');
-    }
-
     public function create(Request $request)
     {
         $this->validate($request,Todo::$rules);
@@ -27,7 +22,12 @@ class TodoController extends Controller
         return redirect('/');
     }
 
-    public function edit(Request $request)
+    public function update(Request $request)
+    {
+        
+    }
+
+    public function delete(Request $request)
     {
         
     }

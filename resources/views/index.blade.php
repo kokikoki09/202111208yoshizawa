@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="{{ asset('resources\css\index.blade.css') }}">
-  <link rel="stylesheet" href="{{ asset('resources\css\reset.css') }}">
+  <link rel="stylesheet" href="{{ asset('/css/index.css') }}">
+  <link rel="stylesheet" href="{{ asset('public/css/reset.css') }}">
   <title>COACHTECH</title>
 </head>
 
@@ -26,9 +26,10 @@
             <th>更新</th>
             <th>削除</th>
           </tr>
+          @foreach($items as $item)
           <tr>
             <td>
-              2021-12-08 13:20:09
+              {{$items->getDetail}}
             </td>
             <form action="" method="post">
               <input type="hidden" name="_token" value="">
@@ -45,6 +46,7 @@
               </form>
             </td>
           </tr>
+          @endforeach
         </table>
       </div>
     </div>
