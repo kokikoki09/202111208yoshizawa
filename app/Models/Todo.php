@@ -14,4 +14,8 @@ class Todo extends Model
         'content' => 'string
         |min:0|max:191',
     );
+
+    public function getDetails(){
+        return $this->created_at;
+    }
 }

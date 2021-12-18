@@ -29,19 +29,19 @@
           @foreach($items as $item)
           <tr>
             <td>
-              {{$items->getDetail}}
+              {{$item->getDetail}}
             </td>
-            <form action="" method="post">
+            <form action="/todo/update" method="post">
               <input type="hidden" name="_token" value="">
               <td>
-                <input type="text" class="input-update" value="mama" name="content" />
+                <input type="text" class="input-update" value="{{$item->content}}" name="content" />
               </td>
               <td>
                 <button class="button-update">更新</button>
               </td>
             </form>
             <td>
-              <form action="" method="post">
+              <form action="/todo/delete" method="post">
                 <input type="hidden" name="_token" value=""> <button class="button-delete">削除</button>
               </form>
             </td>
