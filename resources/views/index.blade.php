@@ -29,7 +29,7 @@
           @foreach($items as $item)
           <tr>
             <td>
-              {{$item->getDetail}}
+              {{$item->getTimes()}}
             </td>
             <form action="/todo/update" method="post">
               <input type="hidden" name="_token" value="">

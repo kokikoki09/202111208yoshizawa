@@ -15,7 +15,7 @@ class Todo extends Model
         |min:0|max:191',
     );
 
-    public function getDetails(){
+    public function getTimes(){
         return $this->created_at;
     }
 }
