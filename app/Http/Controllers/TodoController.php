@@ -24,6 +24,7 @@ class TodoController extends Controller
 
     public function update(Request $request)
     {
+        
     }
 
     public function delete(Request $request)
