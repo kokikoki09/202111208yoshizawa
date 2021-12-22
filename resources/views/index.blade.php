@@ -33,7 +33,7 @@
             <td>
               {{$item->getTimes()}}
             </td>
-            <form action="/todo/update" method="post" action="{{route('update.id', ['id'=> $items])}}">
+            <form method="post" action="{{route('update.id', ['id'=>$item])}}">
               @csrf
               <td>
                 <input type="text" class="input-update" value="{{$item->content}}" name="content" />
@@ -43,7 +43,7 @@
               </td>
             </form>
             <td>
-              <form action="/todo/delete" method="post" action="{{route('delete.id', ['id'=> $items])}}">
+              <form method="post" action="{{route('delete.id', ['id'=>$item])}}">
                 @csrf
                 <button class="button-delete">削除</button>
               </form>
