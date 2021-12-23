@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Todo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\TodoRequest;
 
 class TodoController extends Controller
 {
@@ -14,22 +15,21 @@ class TodoController extends Controller
         return view('index', ['items' => $items]);
     }
 
-    public function create(Request $request)
+    public function create(TodoRequest $request)
     {
         $this->validate($request, Todo::$rules);
         $form = $request->all();
-
         Todo::create($form);
-        return redirect('/');
+        return redirect('/', ['status' => true]);
     }
 
-    public function update(Request $request)
+    public function update(TodoRequest $request)
     {
         $this->validate($request, Todo::$rules);
         $form = $request->all();
         unset($form['_token']);
         Todo::where('id', $request->id)->update($form);
-        return redirect('/');
+        return redirect('/', ['status' => true]);
     }
 
 
