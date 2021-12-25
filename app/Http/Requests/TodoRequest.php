@@ -30,8 +30,8 @@ class TodoRequest extends FormRequest
 
     public function messages()
     {
-        return[
-            'content_max' =>'文字は20文字以内で入力してください'
+        return [
+            'content.max' => '文字は20文字以内で入力してください'
         ];
     }
 }
